@@ -3,7 +3,7 @@ name: CI/CD Pipeline - Build, Push and Deploy to AKS
 on:
   push:
     branches:
-      - main
+      - main   #origin
 
 jobs:
   build-and-deploy:
