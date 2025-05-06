@@ -3,7 +3,7 @@ name: CI/CD Pipeline - Build, Push and Deploy to AKS
 on:
   push:
     branches:
-      - main   #origin
+      - main
 
 jobs:
   build-and-deploy:
@@ -48,5 +48,5 @@ jobs:
 
     - name: Deploy to AKS
       run: |
-        kubectl apply -f k8s/deployment.yaml
-        kubectl apply -f k8s/service.yaml
+        kubectl apply -f microservice/k8s/deployment.yaml
+        kubectl apply -f microservice/k8s/service.yaml
