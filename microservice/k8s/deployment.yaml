@@ -5,7 +5,7 @@ metadata:
   labels:
     app: microservice
 spec:
-  replicas: 2  # Number of pod instances
+  replicas: 2 
   selector:
     matchLabels:
       app: microservice
@@ -16,7 +16,8 @@ spec:
     spec:
       containers:
       - name: microservice-container
-        image: ${{ secrets.DOCKER_USERNAME }}/microservice:latest  # Docker image from GitHub Actions
+        image: briitzolaacr.azurecr.io/microservice:latest
+ 
         ports:
         - containerPort: 3000
         env:
