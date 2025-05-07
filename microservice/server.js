@@ -4,7 +4,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-  res.send('Hello World from Node.js!');
+  res.send('This is my first CI/CD pipeline for a microservices project');
 });
 
 app.listen(port, () => {
